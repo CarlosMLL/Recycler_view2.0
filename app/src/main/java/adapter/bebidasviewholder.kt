@@ -14,10 +14,7 @@ class bebidasviewholder (view:View):RecyclerView.ViewHolder(view){
         binding.nombre.text= bebidasA.nombre
         binding.origen.text= bebidasA.origen
         Glide.with(binding.foto.context).load(bebidasA.foto).into(binding.foto)
-        itemView.setOnClickListener { Toast.makeText(
-            binding.foto.context,
-            bebidasA.nombre,
-            Toast.LENGTH_SHORT).show()
+        itemView.setOnClickListener { Toast.makeText(itemView.context, "500 pesos", Toast.LENGTH_SHORT).show()
         }
     }
 }
