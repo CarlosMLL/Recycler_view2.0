@@ -2,6 +2,7 @@ package com.example.recycler_view20
 
 import adapter.bebidasadapter
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,8 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         private fun initRecyclerView(){
             binding.Recyclerview.layoutManager = LinearLayoutManager(this)
-            binding.Recyclerview.adapter= bebidasadapter(bebidasProvider.bebida)
+            binding.Recyclerview.adapter= bebidasadapter(bebidasProvider.bebida) {clickSelected(it)}
 
         }
+    fun clickSelected(bebidasA: bebidasA){
+Toast.makeText(this, "500 pesos", Toast.LENGTH_SHORT).show()
+    }
 
 }
