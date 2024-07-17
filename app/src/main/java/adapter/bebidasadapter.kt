@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.recycler_view20.bebidasA
 import com.example.recycler_view20.R
 
-class bebidasadapter (private val bebidasB:List<bebidasA>): RecyclerView.Adapter<bebidasviewholder>()
+class bebidasadapter (private val bebidasB:List<bebidasA>, private val click:(bebidasA)->Unit): RecyclerView.Adapter<bebidasviewholder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): bebidasviewholder {
         val layoutinflater= LayoutInflater.from(parent.context)
@@ -19,6 +19,6 @@ class bebidasadapter (private val bebidasB:List<bebidasA>): RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: bebidasviewholder, position: Int) {
         val item = bebidasB[position]
-        holder.render(item)
+        holder.render(item, click)
     }
 }
