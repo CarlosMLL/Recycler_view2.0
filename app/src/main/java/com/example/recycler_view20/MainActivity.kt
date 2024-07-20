@@ -34,5 +34,5 @@ class MainActivity : AppCompatActivity() {
     fun clickSelected(bebidasA: bebidasA){
 Toast.makeText(this, "500 pesos", Toast.LENGTH_SHORT).show()
     }
-
+//hola mundo
 }
